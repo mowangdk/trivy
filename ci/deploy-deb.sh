@@ -9,6 +9,7 @@ for release in ${DEBIAN_RELEASES[@]} ${UBUNTU_RELEASES[@]}; do
   echo "Removing deb package of $release"
   reprepro -A i386 remove $release trivy
   reprepro -A amd64 remove $release trivy
+	reprepro -A arm64 remove $release trivy
 done
 
 for release in ${DEBIAN_RELEASES[@]} ${UBUNTU_RELEASES[@]}; do
